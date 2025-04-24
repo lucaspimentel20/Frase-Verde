@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frase Verde</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Georgia', serif;
+      color: #2f3e46;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .frase-maior {
+      font-size: 1.4rem;
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .frase-menor {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="frase">
+      <div class="frase-maior"></div>
+      <div class="frase-menor"></div>
+    </div>
+  </div>
+
+  <script>
+    const frases = [
+      ["Quem planta cuidado, colhe sombra e vida.", "Quando a gente cultiva respeito pela natureza, ela retribui com abrigo, beleza e ar puro."], 
+      ["A árvore que você planta hoje é o abrigo de amanhã.", "Pode parecer apenas uma muda hoje, mas amanhã ela será sombra, lar de pássaros e parte da nossa história."],
+      ["Cidade verde, vida mais leve.", "Quando o verde toma conta da cidade, o ar fica mais puro, o coração mais tranquilo e os encontros mais gostosos."],
+      ["Cada folha que brota é um sim à vida.", "A natureza responde ao nosso cuidado com um gesto silencioso e poderoso: a folha nova que anuncia esperança."],
+      ["Seja raiz onde só há concreto.", "Mesmo em meio ao asfalto é possível criar raízes de mudança, beleza e renovação. Você pode ser o começo."],
+      ["O verde é o sorriso da cidade.", "Árvores, flores e plantas não são só enfeites — são o que faz a cidade respirar e sorrir."],
+      ["Pequenos atos mudam grandes espaços.", "Jogar o lixo no lugar certo, plantar uma semente, cuidar da calçada... tudo isso transforma a cidade em um lar melhor."],
+      ["Conscientizar é plantar ideias no coração.", "Quando a gente ensina com amor, o mundo floresce em atitudes conscientes e sustentáveis."],
+      ["Mais árvores, mais passarinhos, mais alegria.", "O verde atrai vida. Onde tem planta, tem canto. Onde tem canto, tem alegria."],
+      ["Espaço público limpo é respeito coletivo.", "Cuidar do que é de todos mostra que a gente se importa com o outro, com a cidade e com o futuro."],
+      ["Natureza bem tratada é saúde multiplicada.", "O cuidado com o meio ambiente reflete diretamente no nosso bem-estar físico, emocional e social."],
+      ["O futuro agradece o verde que você planta hoje.", "Cada gesto que fazemos agora se transforma em qualidade de vida para as próximas gerações."],
+      ["Quem joga lixo no chão também suja o próprio nome.", "Respeitar o espaço público é um reflexo do nosso caráter e da nossa consciência cidadã."],
+      ["Deixe que a cidade floresça com sua ajuda.", "A beleza do lugar onde vivemos também depende de nós. Seja parte da mudança."],
+      ["Juntos, transformamos concreto em floresta.", "Quando a comunidade se une, a cidade se torna mais humana, mais verde, mais viva."],
+      ["Ser cidadão é cultivar respeito.", "Ser parte de uma sociedade é mais do que viver nela — é cuidar, proteger e participar com empatia."],
+      ["O canto dos pássaros começa com a sua atitude.", "Criar espaços para a natureza é também abrir espaço para a poesia do cotidiano."],
+      ["Nosso lar vai além da nossa porta.", "A rua, a praça, a calçada... tudo isso faz parte da nossa casa estendida. Vamos cuidar com carinho."],
+      ["A praça é nossa. Vamos mantê-la viva.", "Uma praça cheia de vida é fruto do cuidado de muitos. Seja parte dessa história."],
+      ["Cuidar da cidade é um ato de cidadania.", "Mais do que um dever, cuidar do espaço urbano é um ato de amor coletivo."]
+    ];
+
+    function fraseAleatoria() {
+      const i = Math.floor(Math.random() * frases.length);
+      return frases[i];
+    }
+
+    const [maior, menor] = fraseAleatoria();
+    document.querySelector('.frase-maior').textContent = maior;
+    document.querySelector('.frase-menor').textContent = menor;
+  </script>
+</body>
+</html>
